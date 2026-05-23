@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bir Hikaye ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#ff4e88,#6a11cb);
+    color:white;
+    overflow:hidden;
+}
+
+/* PAGE SYSTEM */
+.page{
+    display:none;
+    height:100vh;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:20px;
+}
+
+.active{display:flex;}
+
+.big{
+    font-family:'Great Vibes',cursive;
+    font-size:55px;
+}
+
+/* INPUT */
+input{
+    padding:15px;
+    border-radius:20px;
+    border:none;
+    font-size:18px;
+    text-align:center;
+    margin-top:10px;
+}
+
+/* BUTTON */
+button{
+    padding:15px 25px;
+    border:none;
+    border-radius:30px;
+    font-size:18px;
+    cursor:pointer;
+    margin:10px;
+}
+
+/* SLIDER */
+.slider{
+    width:90%;
+    display:flex;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    gap:20px;
+}
+
+.slide{
+    min-width:80%;
+    scroll-snap-align:center;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    color:black;
+}
+
+.slide img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+}
+
+/* FLOWERS */
+.flowers span{
+    position:absolute;
+    font-size:30px;
+    animation:fall 6s linear infinite;
+}
+
+@keyframes fall{
+    0%{transform:translateY(-10%);opacity:1;}
+    100%{transform:translateY(110vh);opacity:0;}
+}
+
+/* BUTTON LOVE EFFECT */
+#loveBtn{font-size:18px;}
+#hateBtn{font-size:16px;}
+
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1: INTRO -->
+<div class="page active" id="p1">
+    <h1 class="big">Doğum günün kutlu olsun aşkım ❤️</h1>
+
+    <h2>şimdilik doğum günün kutlu olsun Ceren</h2>
+
+    <p>Soruyu bilirsin... sürpriz açılacak ✨</p>
+
+    <h3>Ben gerçek anlamda aralığın kaçında sana sevgili olmak için teklif yaptım?</h3>
+
+    <input id="q1" placeholder="Cevap...">
+    <button onclick="checkQ1()">Gönder</button>
+
+    <div id="msg1"></div>
+</div>
+
+<!-- PAGE 2: WRONG -->
+<div class="page" id="wrong">
+    <h2>Beni bu kadar çabuk unutmuş olamazsın, hadi tekrar dene ❤️</h2>
+    <button onclick="back()">Tekrar</button>
+</div>
+
+<!-- PAGE 3: LOVE QUESTION -->
+<div class="page" id="p3">
+    <h1 class="big">Beni hala seviyor musun?</h1>
+
+    <button id="loveBtn" onclick="love()">seviyorum</button>
+    <button id="hateBtn" onclick="hate()">sevmiyorum(sakın basma)</button>
+</div>
+
+<!-- PAGE 4: GALLERY -->
+<div class="page" id="p4">
+    <h1>Fotoğraflarımız ❤️</h1>
+
+    <div class="slider">
+        <div class="slide"><img src="foto1.jpg"></div>
+        <div class="slide"><img src="foto2.jpg"></div>
+        <div class="slide"><img src="foto3.jpg"></div>
+        <div class="slide"><img src="foto4.jpg"></div>
+    </div>
+
+    <button onclick="nextBaby()">Devam</button>
+</div>
+
+<!-- PAGE 5: BABY QUESTION -->
+<div class="page" id="p5">
+    <h1>Oğlumuz olsaydı ilk ismi ne olurdu?</h1>
+
+    <input id="baby" placeholder="Cevap...">
+    <button onclick="checkBaby()">Gönder</button>
+
+    <div id="msg2"></div>
+</div>
+
+<!-- PAGE 6: MESSAGE -->
+<div class="page" id="p6">
+    <h1 class="big">Sana söylemek istediklerim...</h1>
+
+    <p style="
+    max-width:600px;
+    font-size:20px;
+    line-height:1.8;
+    background:rgba(255,255,255,0.12);
+    padding:25px;
+    border-radius:20px;
+    backdrop-filter:blur(8px);
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+    border:1px solid rgba(255,255,255,0.2);
+">
+    Biliyorum sevmiyorsun beni eskisi kadar ama 
+    senin beni ne kadar sevebilceğine şahit olduğum
+    için bu sevginin bitebilceğine inanamıyorum 
+    ben hala aşığım seni düşünmeden yapamadıklarımızı 
+    düşünmeden geçirdiğim tek bir gece yok uyuyamıyorum
+    senden vazgeçemiyorum ceren ne kadar artık yerin dibine
+    girsemde vazgeçemiyorum... 
+  
+    Evet geçmişte hatalarım oldu en büyük hatamda sana benim
+    için ne kadar değerli olduğunu hissetirememekti.Anladım
+    artık anladım benim için değerini.Tekrar bana ait olmanı o
+    kadar istiyorumki bu küçük websitesi için günlerdir uğraşıyorum 
+    doğum günün gelsin saatleri sayıyorum belki tekrar kalbinde
+    kelebekler uçurabilirim diye.Umarım bu mesaj kalbine dokunur
+    umarım tekrar benim olursun herşey için teşşekürler Cerenimmm.
+    Seni ömrüm boyunca seveceğim ve kalbimden kimse çıkaramıyacak.
+    doğum günün kutlu olsun...
+</p>
+
+    <button onclick="flowers()">Tıkla ✨</button>
+</div>
+
+<!-- PAGE 7: FINAL -->
+<div class="page" id="p7">
+    <div class="flowers" id="flowers"></div>
+
+    <h1 class="big">Sana veremediğim her çiçek için özür dilerim 🌷</h1>
+
+    <h2>Doğum günün kutlu olsun Cerenimmm ❤️</h2>
+</div>
+
+<script>
+
+let loveSize = 18;
+let hateSize = 16;
+
+// Q1
+function checkQ1(){
+    let val = document.getElementById("q1").value;
+
+    if(val == "10"){
+        show("p3");
+    } else {
+        show("wrong");
+    }
+}
+
+function back(){
+    show("p1");
+}
+
+// LOVE system
+function love(){
+    loveSize += 6;
+    document.getElementById("loveBtn").style.fontSize = loveSize + "px";
+
+    if(loveSize > 60){
+        show("p4");
+    }
+}
+
+function hate(){
+    loveSize += 5;
+    hateSize -= 1;
+
+    document.getElementById("loveBtn").style.fontSize = loveSize + "px";
+    document.getElementById("hateBtn").style.fontSize = Math.max(10,hateSize) + "px";
+}
+
+// gallery → baby
+function nextBaby(){
+    show("p5");
+}
+
+// baby check
+function checkBaby(){
+    let val = document.getElementById("baby").value.toLowerCase();
+
+    if(val == "mehmet"){
+        show("p6");
+    } else {
+        document.getElementById("msg2").innerText = "Yanlış ❤️ tekrar dene";
+    }
+}
+
+// flowers
+function flowers(){
+    show("p7");
+
+    let c = document.getElementById("flowers");
+
+    for(let i=0;i<50;i++){
+        let s = document.createElement("span");
+        s.innerHTML = "🌷";
+        s.style.left = Math.random()*100 + "%";
+        s.style.animationDuration = (3+Math.random()*5)+"s";
+        c.appendChild(s);
+    }
+}
+
+// page switch
+function show(id){
+    document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+}
+
+</script>
+
+</body>
+</html>
